@@ -1,0 +1,25 @@
+model:
+    pretrained_model_name_or_path: intfloat/e5-mistral-7b-instruct
+    adapter_model_name: checkpoints_kg/step3_final_retrieval/models/e5_mistral_7b_instruct
+    force_resize_token_embeddings: True
+    pad_token: "</s>"
+    padding_side: "left"
+
+data:
+    eval_file: checkpoints_kg/inference/R05_step2.jsonl
+    max_len: 1536
+
+training:
+    seed: 42
+    do_train: False
+    do_predict: True
+    bf16_full_eval: True
+    remove_unused_columns: False
+    per_device_eval_batch_size: 1
+    group_by_length: False
+    output_dir: checkpoints_kg/inference/R05eval
+    overwrite_output_dir: True
+    disable_tqdm: False
+    report_to: "none"
+    ddp_find_unused_parameters: False
+    gradient_checkpointing: True

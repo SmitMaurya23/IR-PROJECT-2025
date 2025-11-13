@@ -1,0 +1,80 @@
+Datasets Formats:
+
+------------------------------------
+*article_dict.json
+"1": {
+    "number": "1",
+    "description": "(Standards for Construction)",
+    "content": "(1) Private rights must be congruent with the public welfare.\n(2) The exercise of rights and performance of duties must be done in good faith.\n(3) Abuse of rights is not permitted.",
+    "section": null,
+    "chapter": "I/I",
+    "part": "I",
+    "full_text": "General Provisions , Common Provisions , (Standards for Construction) , (1) Private rights must be congruent with the public welfare.\n(2) The exercise of rights and performance of duties must be done in good faith.\n(3) Abuse of rights is not permitted.",
+    "ontologies": []
+  }
+
+------------------------------------
+*section_dict.json
+"I/II/1": {
+    "id": "ef2f1cdf-22cf-42f5-a978-2ebfe7c9788a",
+    "number": "1",
+    "description": "Capacity to Hold Rights",
+    "article_list": [
+      "3"
+    ],
+    "chapter": "I/II",
+    "part": "I"
+  }
+------------------------------------
+*chapter_dict.json
+"I/I": {
+    "id": "49fb8725-deef-4f12-bb2b-38651f95f9f0",
+    "number": "I",
+    "description": "Common Provisions",
+    "section_list": [],
+    "article_list": [
+      "1",
+      "2"
+    ],
+    "part": "I"
+  }
+------------------------------------
+*part_dict.json
+"I": {
+    "number": "I",
+    "description": "General Provisions",
+    "chapter_list": [
+      "I/I",
+      "I/II",
+      "I/III",
+      "I/IV",
+      "I/V",
+      "I/VI",
+      "I/VII"
+    ]
+  }
+------------------------------------
+*test_data.json
+"R04-01-I": {
+    "id": "R04-01-I",
+    "label": "N",
+    "retrieved_list": [
+      "5",
+      "6"
+    ],
+    "retrieved_content": "(Juridical Acts by Minors)\nArticle 5 (1) A minor must obtain the consent of the minor's legal representative to perform a juridical act;provided, however, that this does not apply to a juridical act for merely acquiring a right or being released from an obligation.\n(2) A juridical act in contravention of the provisions of the preceding paragraph is voidable.\n(Permission for Minors to Conduct Business)\nArticle 6 (1) A minor who is permitted to conduct one or multiple types of business has the same capacity to act as an adult as far as that business is concerned.",
+    "query": "A juridical act by a minor who is permitted to conduct business may not be rescinded even if the judicial act does not concern the business."
+  }
+------------------------------------
+*train_data.json
+ "H18-1-1": {
+    "id": "H18-1-1",
+    "label": "Y",
+    "retrieved_list": [
+      "572"
+    ],
+    "retrieved_content": "Article 572\nEven if the seller makes a special agreement to the effect that the seller does not warrant in the case prescribed in the main clause of Article 562, paragraph (1) or Article 565, the seller may not be released from that responsibility with respect to any fact that the seller knew but did not disclose, and with respect to any right that the seller personally created for or assigned to a third party.",
+    "query": "A special provision that releases warranty can be made, but in that situation, when there are rights that the seller establishes on his/her own for a third party, the seller is not released of warranty."
+  }
+------------------------------------
+

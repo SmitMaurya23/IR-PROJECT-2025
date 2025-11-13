@@ -1,0 +1,28 @@
+model:
+    pretrained_model_name_or_path: google/gemma-2-27b-it
+    adapter_model_name: checkpoints/step3_final_retrieval/models/gemma_2_27b_it
+    force_resize_token_embeddings: True
+    padding_side: "left"
+    quantization_config:
+        load_in_4bit: True
+        bnb_4bit_quant_type: nf4
+        bnb_4bit_use_double_quant: False
+
+data:
+    eval_file: checkpoints/inference/R06_step2.jsonl
+    max_len: 1536
+
+training:
+    seed: 42
+    do_train: False
+    do_predict: True
+    bf16_full_eval: True
+    remove_unused_columns: False
+    per_device_eval_batch_size: 1
+    group_by_length: False
+    output_dir: checkpoints/inference/R06eval
+    overwrite_output_dir: True
+    disable_tqdm: False
+    report_to: "none"
+    ddp_find_unused_parameters: False
+    gradient_checkpointing: True

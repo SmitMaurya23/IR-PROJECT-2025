@@ -1,0 +1,4 @@
+accelerate launch --num_processes=1 --mixed_precision=fp16 src/run_step3.py    --config configs/infer/phi_3_medium_4k_instruct.yaml
+accelerate launch --num_processes=1 --mixed_precision=fp16 src/run_step3.py     --config configs/infer/gemma_2_9b_it.yaml
+accelerate launch --num_processes=1 --mixed_precision=fp16 src/run_step3.py     --config configs/infer/e5_mistral_7b_instruct.yaml
+accelerate launch --num_processes=1 --mixed_precision=fp16 src/run_step3.py     --config configs/infer/gemma_2_27b_it.yam
